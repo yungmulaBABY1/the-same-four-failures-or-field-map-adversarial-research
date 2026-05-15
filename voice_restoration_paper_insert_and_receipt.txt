@@ -1,0 +1,17 @@
+Suggested main-text insertion
+
+Place this at the end of the “VOICE RESTORATION PROBLEM” section, after the paragraph explaining the manual phrase-search test and before “THE GENERAL PRINCIPLE.”
+
+Reusable audit prompt.
+The manual phrase-search test is only the minimum check. A full reusable prompt for detecting compliance softening, anticipatory hedging, repeated reassurance clauses, false balance, and unnecessary tone dilution is included in the public evidence bundle as:
+
+voice_restoration_anticipatory_compliance_audit_prompt.txt
+
+The prompt asks an AI system to scan a full draft for repeated acknowledgment clauses, softened methodological claims, vague “limitations” language, and unnecessary field-legitimizing caveats. It also instructs the model not to remove caveats that do real evidentiary work: preventing factual overstatement, distinguishing method critique from motive accusation, acknowledging real contrary evidence, defining scope, preserving falsifiability, or clarifying that the critique is about evidence rather than people.
+
+The automated audit should not replace human review. Models can miss context, overcorrect, or fail when the draft exceeds the available context window. Treat the prompt as a screening tool: it finds likely softening patterns so the author can decide whether each caveat is necessary, excessive, or a sign that the model has diluted the argument.
+
+Suggested evidence-bundle table row
+
+Receipt file | Purpose in the public evidence bundle
+voice_restoration_anticipatory_compliance_audit_prompt.txt | Reusable prompt for detecting compliance softening, anticipatory hedging, repeated reassurance clauses, false balance, and unnecessary tone dilution in AI-assisted methodological critique. Includes safeguards for preserving caveats that do real evidentiary work.
