@@ -1,0 +1,208 @@
+FIELD DIAGNOSTIC: 44 QUESTIONS TO RUN AGAINST YOUR FIELD
+A companion to “The Same Four Failures, Different Fields”
+GitHub: https://github.com/yungmulaBABY1/the-same-four-failures-or-field-map-adversarial-research
+Archive: DOI 10.5281/zenodo.20201226
+
+-----
+
+HOW TO USE THIS PROMPT
+
+Option A — With an AI system (recommended first pass):
+Paste this entire document into Grok or Claude. Add a one-paragraph description of your field
+and the contested claim you are investigating. Ask the model to answer each question as
+accurately as possible based on the published literature. Then compare the model’s answers
+to your own domain knowledge. The gaps between what the model says and what you observe
+are your entry points.
+
+Use Grok for initial mapping — it engages contested empirical territory more directly.
+Use Claude to structure and synthesize the findings into a coherent challenge.
+Use ChatGPT only after the argument is stable — for adversarial stress-testing and
+generating the strongest objections to your challenge. Do not use ChatGPT for the
+initial diagnostic pass on politically sensitive fields (see the Critical Warning in
+the main document).
+
+Option B — With yourself:
+Work through the questions honestly before investing significant time in building a challenge.
+If you cannot answer yes to most of Section A and yes to most of Section B, the challenge
+may not be right for your position or your field at this time.
+
+-----
+
+SECTION A: DOES THE FAILURE MODE EXIST?
+
+If you answer yes to most of these questions, the failure mode is likely present.
+
+ON THE CORE CLAIM
+
+1. What is the field’s central claim? State it in one sentence.
+2. Is this claim presented as an empirical finding or as a theoretical framework?
+   Is there a meaningful difference between how it is stated and how it is treated?
+3. When was this claim first established? What was the original study or paper?
+   How large was the sample? What population was studied?
+4. Has the original claim been directly replicated by independent researchers using
+   pre-registered methods? What happened?
+5. Is there a version of the claim that is well-supported (e.g. historical discrimination
+   is real) and a version that is not (e.g. current outcome gaps are primarily caused by
+   current discrimination)? Does the field distinguish between them?
+
+ON EMPIRICAL STATUS
+
+6. Does the field treat this claim as settled or as an active research question?
+   What would it take for a researcher in this field to publish a paper challenging the claim?
+7. Has the field specified what evidence would falsify the central claim?
+   Is there a pre-specified disconfirmation condition?
+8. Has the field’s main prediction been tested against a natural experiment or a
+   long-running intervention? What was the result? Did the model update?
+9. Are there adjacent fields or literatures that contradict or complicate the central
+   claim? Does the dominant literature engage with them?
+
+ON THE PROXY
+
+10. What does the field actually measure? Describe the most common data sources
+    and measurement instruments.
+11. What does the field claim to explain? Name the target construct.
+12. Are the measurement instruments and the target construct the same thing?
+    If not, what is the gap between them?
+13. What confounds are routinely present in the measurement that the field does not
+    control for? Would a practitioner in this domain recognize those confounds immediately?
+14. Has anyone in the field formally challenged the validity of the primary measurement
+    instrument? What happened to that challenge?
+
+ON THE CITATION NETWORK
+
+15. Name the 5-10 most-cited papers in this subfield. Do they primarily cite each other
+    or do they cite primary experimental evidence?
+16. Is there a small founding cluster of papers that everything else cites?
+    Were those papers directly tested or were their claims adopted as premises?
+17. What disciplines are represented in the dominant citation network?
+    What disciplines with relevant expertise are absent?
+18. Are there papers that challenged the consensus that are rarely cited or cited only
+    to be dismissed? What were their arguments?
+
+ON EXTRAPOLATION
+
+19. At what population level were the foundational studies conducted?
+    (Lab subjects? Survey respondents? Intermediate-skill practitioners? Amateur populations?)
+20. At what population level does the field make its claims?
+    (Elite performers? Real-world professional behavior? Population-level policy outcomes?)
+21. What is the gap between those two levels? What assumptions are required to bridge them?
+    Are those assumptions stated or implicit?
+22. Are there contexts where the field’s model predicts convergence or improvement that
+    have not materialized? How does the field explain those failures?
+
+ON THE RATCHET
+
+23. What interventions has the field prescribed? At what scale have they been implemented?
+24. What metrics improved after implementation? What metrics did not?
+25. Was the primary outcome measure independent of the intervention — i.e., did it
+    measure the underlying construct, or did it measure compliance with the intervention?
+26. Has the intervention been reversed or substantially modified in any jurisdiction or
+    institution? What happened? How did the field respond?
+27. When the intervention fails on its own terms, what does the field prescribe next?
+
+-----
+
+SECTION B: CAN THE CHALLENGE BE RUN?
+
+If you answer yes to most of these questions, you have the raw material to run the challenge.
+
+ON YOUR DOMAIN KNOWLEDGE
+
+28. Do you have direct experience with the phenomenon the field claims to explain?
+    At what level — amateur, professional, elite?
+29. Can you identify specific instances where the field’s model predicts something that
+    does not match what you observe in practice?
+30. Do you know which confounds the field routinely ignores because you have
+    encountered them directly?
+31. Can you name the proxy problem — the specific gap between what the field measures
+    and what it claims to explain — in terms that someone in the field would recognize
+    as a legitimate methodological objection?
+
+ON THE DECISIVE TEST
+
+32. What evidence would directly test the central claim at the appropriate level of analysis?
+33. Does this data exist? Who has it? Has it been collected and not published,
+    or has it genuinely not been collected?
+34. If the data does not exist, what would it take to collect it?
+    Is there a natural experiment or an existing dataset that approximates it?
+35. If you had the decisive test result, would it be publishable? Or would the field’s
+    gatekeeping prevent it from reaching the literature regardless of the finding?
+
+ON YOUR POSITION
+
+36. Do you have something to lose by running this challenge?
+    (Tenure, funding, professional relationships, institutional standing)
+37. Do you have something to gain that is not career-dependent?
+    (Intellectual satisfaction, correction of a harm you have observed,
+    contribution to a field you care about)
+38. Are you willing to publish under your own name with receipts?
+39. Are you willing to specify what evidence would change your own conclusion?
+
+-----
+
+SECTION C: CALIBRATION QUESTIONS
+
+These questions tell you whether your challenge is methodological or motivated.
+Answer them before you start writing.
+
+40. Is there a version of the field’s central claim that you accept as valid?
+    What is it? Where does the field’s overreach begin?
+41. Can you describe the strongest version of the opposing argument — the best case
+    the field could make for its claims — before dismantling it?
+42. If the decisive test came back in the field’s favor, would you update?
+    What would that update look like?
+43. Are there aspects of the field’s work you would cite approvingly in your challenge?
+    (If the answer is no, your challenge may be advocacy rather than methodology.)
+44. Is the failure mode you are identifying a property of the field’s institutional
+    structure, or are you making a claim about the motives of individual researchers?
+    (The former is documentable. The latter requires stronger evidence.)
+
+-----
+
+RED FLAGS — stop and reconsider if:
+
+- You cannot describe a version of the field’s claim you accept (Q40)
+  → you may be writing a polemic, not a methodological challenge
+- You cannot specify what evidence would change your conclusion (Q42)
+  → your challenge is not falsifiable
+- Your challenge requires attributing motive rather than documenting method (Q44)
+  → you need more evidence before publishing
+- You answered no to most of Section B
+  → domain expertise is necessary but not sufficient
+
+GREEN FLAGS — proceed if:
+
+- You can name the proxy problem in terms the field would recognize as legitimate
+- You know which confounds are ignored because you have encountered them directly
+- The decisive test is specifiable and the data either exists or is collectible
+- You can describe the strongest opposing argument before dismantling it
+- You are willing to publish under your own name with receipts
+- You can answer Q40-44 honestly without becoming defensive
+
+-----
+
+WHAT TO DO WITH YOUR ANSWERS
+
+If Section A is mostly yes and Section B is mostly yes:
+You have the raw material. Use the methodology in the main document to operationalize it.
+The how-to guide (8 steps) is the production infrastructure. The citation spine prompt
+in Step 2 is your first tool.
+
+If Section A is mostly yes but Section B is weak:
+The failure mode exists but you may not be the right person to run this challenge in
+this field, or the decisive test may be genuinely unavailable. Consider whether you
+can partner with someone who has the missing domain knowledge or institutional access.
+
+If Section C reveals motivated reasoning:
+Run the calibration questions again after writing a steelman of the field’s position.
+A methodological challenge that can survive steelmanning is publishable.
+One that cannot is a polemic — which has its place, but is a different project.
+
+-----
+
+This prompt was developed in the context of the four-paper esports body of work
+documented at DOI 10.5281/zenodo.20201226. The methodology it supports is described
+in full in the meta-paper: “A Jobless High School Dropout Out-Researched an Academic
+Field in 11 Days on an iPhone — and Here’s the Receipts.”
+
+GitHub repository: https://github.com/yungmulaBABY1/the-same-four-failures-or-field-map-adversarial-research
