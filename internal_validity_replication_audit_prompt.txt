@@ -1,0 +1,262 @@
+INTERNAL VALIDITY & REPLICATION AUDIT PROMPT
+
+Purpose:
+This prompt audits the internal validity of a specific study or finding — whether the result itself is likely to be real, replicable, and free of analytic artifacts — before assessing what it claims or how it has been cited.
+
+Citation laundering and proxy problems operate on the output of a study. P-hacking, HARKing (Hypothesizing After Results are Known), selective reporting, and underpowered designs corrupt the finding at the source. A finding that fails internal validity cannot support the claims built on it regardless of how many papers cite it.
+
+Run this audit before or alongside the construct validity audit. If the foundational finding fails internal validity, note this in the thesis. The claim is doubly weak: the study may not measure what it claims, and the finding may not be real.
+
+-----
+
+INPUTS
+
+Provide the following:
+
+1. Foundational paper(s):
+   [Paste citation, abstract, methods, results, and statistical reporting where available.]
+1. Central empirical finding:
+   [State the finding in one sentence: what effect was found, in what population, measured how, of what magnitude.]
+1. Claimed construct and downstream use:
+   [What is this finding used to prove in subsequent literature or policy?]
+1. Known replication attempts (if any):
+   [Paste citations and outcomes if known. If none known, state “unknown.”]
+1. Pre-registration status (if known):
+   [Was the study pre-registered? At what stage? Did the published analysis match the pre-registered plan?]
+
+-----
+
+DATA-HONESTY RULE
+
+For every claim about study design, analysis choices, or replication status, state how it was determined:
+
+- reported in the paper itself
+- reported in supplementary materials
+- found in pre-registration record (OSF, ClinicalTrials, AsPredicted, etc.)
+- found in replication literature
+- found in methodological critique
+- model memory / needs verification
+- unknown / not reported
+
+Do not infer pre-registration compliance from the absence of information. If pre-registration status is unknown, state it clearly.
+
+-----
+
+A. PRE-REGISTRATION AND ANALYSIS PLAN
+
+1. Was the study pre-registered before data collection began?
+- If yes: where, when, and what was registered?
+- If no: was any aspect of the design registered after data collection but before analysis?
+- If unknown: note as unknown
+1. Did the published analysis match the pre-registered plan?
+- Were primary outcomes changed?
+- Were additional outcomes added post-hoc?
+- Were subgroup analyses pre-specified or exploratory?
+- Were exclusion criteria changed after data collection?
+1. If not pre-registered: how many outcomes were tested in the study?
+- How many are reported?
+- What is the probability that at least one would reach p < .05 by chance given the number tested?
+
+Required table:
+
+|Pre-registration status|Analysis match|Outcomes tested|Outcomes reported|Post-hoc subgroups|P-hacking risk|
+|-----------------------|--------------|---------------|-----------------|------------------|--------------|
+
+P-hacking risk options: Low / Moderate / High / Severe / Cannot assess
+
+-----
+
+B. EFFECT SIZE AND STATISTICAL POWER
+
+1. What is the reported effect size? (r, d, OR, RR, η², etc.)
+1. How does this effect size compare to:
+- The field’s typical effect sizes for similar constructs?
+- The minimum effect size that would be practically or clinically meaningful?
+- Later corrected meta-analyses or larger independent replications?
+1. What was the sample size?
+1. What statistical power did the study have to detect the reported effect at the reported size?
+- Was the sample size determined in advance by power calculation?
+- If not, at what power level was the study operating?
+1. Winner’s curse assessment: studies that barely achieve p < .05 in underpowered designs systematically overestimate effect sizes. Is the reported effect size likely inflated?
+
+Required table:
+
+|Reported effect size|Field typical range|Corrected meta-analysis estimate|Sample size|Estimated power|Winner’s curse risk|
+|--------------------|-------------------|--------------------------------|-----------|---------------|-------------------|
+
+Winner’s curse risk options: Low / Moderate / High / Cannot assess
+
+-----
+
+C. HARKING (HYPOTHESIZING AFTER RESULTS ARE KNOWN)
+
+1. Is the central finding presented as confirmatory (testing a pre-specified hypothesis) or exploratory?
+1. Does the introduction describe a specific directional hypothesis that matches the result?
+- If yes: was this hypothesis pre-registered before data collection?
+- If no: was the hypothesis direction specified in any pre-study documentation?
+1. Are there signs of post-hoc hypothesis specification?
+- Vague or multiple hypotheses in the introduction that could accommodate various outcomes?
+- Subgroup findings presented as primary results without pre-specification?
+- Effect found in unexpected direction presented as theoretically predicted?
+1. Does the discussion present exploratory findings as if they were confirmatory?
+
+Required table:
+
+|Hypothesis type|Pre-registered?|HARKing indicators|HARKing risk|
+|---------------|---------------|------------------|------------|
+
+HARKing risk options: Low / Moderate / High / Cannot assess
+
+-----
+
+D. SELECTIVE REPORTING
+
+1. Are all pre-registered outcomes reported?
+- If not: which outcomes are missing?
+- Is there a plausible explanation for their omission?
+1. Are there signs of selective subgroup reporting?
+- Is the reported effect found in the full sample or only in a subgroup?
+- Was the subgroup pre-specified?
+1. Are there signs of selective time-point reporting?
+- Is the reported effect found at all time points or only at one?
+- Was the reported time point pre-specified?
+1. Publication bias assessment:
+- Is this a published positive result in a high-impact journal?
+- Are there known null or negative replication attempts?
+- Is the effect size unusually large compared to later replications (consistent with publication bias)?
+
+Required table:
+
+|Outcomes registered|Outcomes reported|Missing outcomes|Subgroup selectivity|Publication bias indicators|
+|-------------------|-----------------|----------------|--------------------|---------------------------|
+
+-----
+
+E. REPLICATION STATUS
+
+1. Has the finding been directly replicated?
+- How many direct replication attempts exist?
+- What proportion succeeded?
+- Were the replications pre-registered and adequately powered?
+- Were the replications conducted by independent labs?
+1. Has the finding been conceptually replicated?
+- Do meta-analyses support the effect?
+- Are meta-analyses author-run or independent?
+- Do meta-analyses show evidence of publication bias (funnel plot asymmetry, p-curve skew)?
+1. Effect size trajectory:
+- Has the reported effect size shrunk across successive replications?
+- What is the current best estimate of the true effect size?
+- Does the current best estimate support the downstream claims built on the original finding?
+
+Required table:
+
+|Direct replications|Success rate|Pre-registered reps|Independent reps|Meta-analytic estimate|Effect shrinkage|
+|-------------------|------------|-------------------|----------------|----------------------|----------------|
+
+-----
+
+F. DATA AND CODE AVAILABILITY
+
+1. Were the data made publicly available?
+1. Was the analysis code made publicly available?
+1. Has anyone attempted a reanalysis of the original data?
+- If yes: what did the reanalysis find?
+1. Are there known data irregularities, anomalies, or concerns?
+- Has the paper been flagged on PubPeer or by post-publication peer review?
+- Have any authors issued corrections or expressions of concern?
+
+Required table:
+
+|Data available|Code available|Reanalysis attempted|Reanalysis result|PubPeer flags|Corrections issued|
+|--------------|--------------|--------------------|-----------------|-------------|------------------|
+
+-----
+
+G. SUMMARY TABLE — INTERNAL VALIDITY
+
+Complete this table:
+
+|Dimension               |Assessment|Severity|Notes|
+|------------------------|----------|--------|-----|
+|Pre-registration        |          |        |     |
+|Analysis plan compliance|          |        |     |
+|P-hacking risk          |          |        |     |
+|Effect size plausibility|          |        |     |
+|Statistical power       |          |        |     |
+|Winner’s curse risk     |          |        |     |
+|HARKing risk            |          |        |     |
+|Selective reporting     |          |        |     |
+|Replication success rate|          |        |     |
+|Effect size trajectory  |          |        |     |
+|Data/code availability  |          |        |     |
+|Post-publication flags  |          |        |     |
+
+Severity options: None / Minor / Moderate / Major / Fatal / Cannot assess
+
+-----
+
+H. INTERNAL VALIDITY VERDICT
+
+Classify the finding using this scale:
+
+A. Strong — pre-registered, adequately powered, replicated by independent labs, effect stable across replications, data available
+B. Acceptable — minor design limitations, replicated in spirit if not directly, effect size plausible
+C. Weak — underpowered or unreplicated, effect size possibly inflated, design concerns present
+D. Suspect — multiple internal validity problems, non-replicated or failed replication, effect size likely inflated
+E. Invalid — failed replication in adequately powered independent studies, p-hacking or HARKing evidence, finding likely artifact of analytic choices
+F. Cannot assess — insufficient reporting to evaluate
+
+Then answer:
+
+1. Is the foundational finding likely to be real?
+1. If it is real, is its magnitude sufficient to support the downstream claims built on it?
+1. What is the best current estimate of the true effect size?
+1. What pre-registration and replication evidence would upgrade this verdict?
+1. What is the decisive test that has not been run?
+
+-----
+
+I. INTEGRATION WITH CONSTRUCT VALIDITY AUDIT
+
+After completing this audit, note:
+
+1. If the finding is suspect or invalid (D/E), the construct validity problem is secondary — the foundational claim is doubly weak.
+1. If the finding is acceptable or strong but the construct validity fails, the study may be internally valid but externally overclaimed.
+1. If both internal validity and construct validity fail, note the compounding failure: the study may not measure what it claims AND the finding may not be real.
+
+The decisive-test sentence should integrate both:
+
+“The foundational finding [is/is not] likely to be real based on current replication evidence, AND the construct being measured [does/does not] validly represent the downstream claim — meaning the policy/institutional deployment rests on [a real but overclaimed finding / an unreliable finding being overclaimed / both].”
+
+-----
+
+J. FINAL ONE-PARAGRAPH SUMMARY
+
+Write one paragraph summarizing:
+
+- Whether the foundational finding is likely real
+- The current best estimate of the true effect size
+- The replication status
+- The internal validity verdict
+- How internal validity failures compound or modify the construct validity assessment
+- What the decisive test would look like
+
+This paragraph should be direct, evidence-based, and free of unnecessary reassurance language.
+
+-----
+
+REMINDER
+
+This prompt audits the finding itself — whether the result is real and stable — before asking what it proves.
+
+A finding that replicates cleanly but is overclaimed has one problem.
+A finding that doesn’t replicate has a different problem.
+A finding that doesn’t replicate AND is overclaimed is doubly invalid.
+
+The toolkit now covers both.
+
+You may begin with suspicion.
+You may not end with suspicion.
+
+Start wherever the anomaly appears.
+Finish with receipts.
