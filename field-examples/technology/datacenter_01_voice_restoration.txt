@@ -1,0 +1,111 @@
+VOICE RESTORATION CHANGES — DATA CENTER AUDIT PAPER
+Audit run against: voice_restoration_anticipatory_compliance_audit_prompt.txt
+Overall severity: Mild softening
+
+===
+
+CHANGE 1 — “Honest concession” label removed (Claim 3)
+
+ORIGINAL:
+“Honest concession: This is the strongest of the five claims. Water stress in arid regions
+during drought years is a real documented conflict. Local governments in water-stressed
+communities have legitimate concerns about allocation.”
+
+PROBLEM:
+The “Honest concession” label is compliance performance — the author audibly flagging
+their own good faith before making a methodological point. A confident author does not
+announce the concession; they make it. The substance was doing real evidentiary work.
+The label was not.
+
+VOICE-RESTORED:
+“The water consumption figures are real. Hyperscale facilities in arid regions do create
+documented stress during drought years, and local governments in those communities have
+legitimate allocation concerns. The failure is in the jump from local stress to national
+catastrophe: the denominator was omitted entirely. ‘Towns go dry’ is the conclusion you
+reach when you report the numerator and erase the denominator.”
+
+CLASSIFICATION: Compliance performance / self-announced good faith
+ACTION: Rewrite — drop label, keep substance, add the denominator punch line
+
+===
+
+CHANGE 2 — Repeated “costs exist and deserve honest mitigation” line cut
+(What the Posters Don’t Count section)
+
+ORIGINAL (second instance):
+“The posters present a zero-sum worldview: data centers = pure loss for regular people.
+The actual dynamic is investment with real but solvable trade-offs. The costs exist and
+deserve honest mitigation. The benefits — jobs, tax revenue, and massive productivity
+gains — are being deliberately erased from the conversation.”
+
+PROBLEM:
+“The costs exist and deserve honest mitigation” appears verbatim in the Political Version
+paragraph and again here. The second instance, combined with the “some communities
+may rationally decide” paragraph immediately following, creates a back-to-back cluster of
+reassurances at the end of the section’s strongest argumentative block. The “some
+communities” paragraph is doing legitimate scope work on its own. The repeated line adds
+no new information — it only softens the momentum before the close.
+
+VOICE-RESTORED:
+“The posters present a zero-sum worldview: data centers = pure loss for regular people.
+The actual dynamic is investment with real but solvable trade-offs — and the benefit side
+of that ledger is being deliberately erased from the conversation.”
+
+CLASSIFICATION: Repeated reassurance / redundant good-faith signal
+ACTION: Cut the repeated line; retain the “some communities” paragraph as written
+
+===
+
+CHANGE 3 — Claim 1 verdict sharpened (minor)
+
+ORIGINAL:
+“267% is an extreme outlier stripped of context and presented as representative.
+The documented impact is real and in the low single digits.”
+
+PROBLEM:
+The verdict lands the fact but does not connect it to the mechanism. The gap between
+“low single digits” and “267%” is the entire exploit — stating it explicitly completes
+the point.
+
+VOICE-RESTORED:
+“267% is an extreme outlier stripped of context and presented as representative.
+The documented impact is real and in the low single digits — that is the entire gap
+the infographic exploits.”
+
+CLASSIFICATION: Incomplete verdict / missing explanatory punch
+ACTION: Rewrite — add the mechanism clause
+
+===
+
+CAVEATS PRESERVED (doing real evidentiary work — not touched)
+
+- “Some communities may rationally decide specific projects are not worth the local
+  trade-offs. That is a legitimate decision.” — scope protection, prevents overreach
+- “The modeling study is real.” (Claim 2) — prevents factual overstatement
+- Water stress concession substance (Claim 3) — genuine local/national distinction;
+  kept in full, label removed
+- “The costs exist and deserve honest mitigation” — FIRST INSTANCE ONLY
+  (Political Version paragraph), where it frames the omission argument
+- “real but modest local costs” (The Pattern) — accurate contrast, not softening
+
+===
+
+TERMINOLOGY — no changes required
+
+The draft already uses: proxy failure, construct mismatch, motte-and-bailey,
+displacement accounting failure, load-bearing lie, fabricated.
+No weak-term substitutions were needed.
+
+===
+
+MANUAL REVIEW FLAGS (not changed — author judgment required)
+
+1. The AI force multiplier / jobs section asserts the historical job-creation pattern
+   confidently (“AI is following the same pattern, only faster”). This is defensible as
+   mainstream economic consensus but is contested specifically for AI. If published in
+   a venue where empirical challenge is likely, one sentence noting that AI’s
+   displacement-to-creation ratio is still being measured could preempt the strongest
+   legitimate objection — without hedging the core argument.
+1. The Gallup figures (75% / 63% / 63%) are cited as a March 2026 poll in the text
+   version but without date in the PDF. Verify citation is ready — the specificity
+   will attract scrutiny.
