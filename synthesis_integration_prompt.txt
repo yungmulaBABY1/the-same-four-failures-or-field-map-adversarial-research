@@ -1,0 +1,185 @@
+SYNTHESIS & INTEGRATION PROMPT
+
+Purpose:
+Use this prompt after completing two or more individual audits on the same paper, claim, or field. Its job is to integrate findings across prompts into one clear, prioritized, non-hedged overall assessment.
+
+The individual prompts break things down. This prompt puts them back together — but as a compounding failure analysis, not a summary. The goal is a publishable verdict, not a balanced overview.
+
+Run after: Construct Validity Audit, Internal Validity & Replication Audit, Citation Network Audit, Oppositional Counter-Audit, or any combination of these. The more prompts completed, the more compounding the synthesis can identify.
+
+-----
+
+ANTI-HEDGING RULE
+
+Do not default to hedging or false balance.
+Do not use phrases like “it’s complicated,” “both sides have merit,” “more research is needed,” or “the jury is still out” unless the evidence genuinely requires that level of uncertainty.
+Prioritize analytical clarity over appearing neutral.
+If the evidence is weak, say so plainly.
+If the claim fails on multiple dimensions simultaneously, say so directly and explain how the failures compound.
+Focus on what the audits actually revealed. Do not introduce new speculation.
+
+-----
+
+INPUT
+
+Paste the outputs from each completed audit below. Label each one clearly.
+
+Construct Validity Audit output:
+[PASTE HERE or state “not run”]
+
+Internal Validity & Replication Audit output:
+[PASTE HERE or state “not run”]
+
+Citation Network Audit output:
+[PASTE HERE or state “not run”]
+
+Field Diagnostic output:
+[PASTE HERE or state “not run”]
+
+Oppositional Counter-Audit output:
+[PASTE HERE or state “not run”]
+
+Off-Label Use Audit output (if applicable):
+[PASTE HERE or state “N/A”]
+
+Other relevant analysis:
+[PASTE HERE or state “none”]
+
+Core claim being evaluated:
+[State the claim in one sentence.]
+
+-----
+
+SYNTHESIS INSTRUCTIONS
+
+Work through the following steps. Be specific at each step. Do not produce vague generalizations.
+
+-----
+
+STEP 1: IDENTIFY THE MOST IMPORTANT FINDINGS
+
+List the 2–4 strongest methodological or evidentiary problems identified across all audits. Do not treat every issue as equally significant. Prioritize by:
+
+- Severity: does this problem fatally undermine the claim, or only weaken it?
+- Centrality: does this problem affect the core claim or only a peripheral aspect?
+- Irreparability: could the problem be fixed with more data, or is it structural?
+
+For each problem, state:
+
+- What it is
+- Which audit identified it
+- Why it matters for the core claim specifically
+
+-----
+
+STEP 2: HOW THESE PROBLEMS COMPOUND
+
+Explain how the identified problems interact and reinforce each other. Be specific about the compounding mechanism.
+
+Examples of compounding:
+
+- A proxy failure means the study didn’t measure the right thing, AND the finding doesn’t replicate, meaning the wrong thing was measured unreliably — doubly invalid.
+- A concentrated citation network means the weak foundational finding has been recycled without independent verification, AND the foundational study’s limitations are dropped as the claim travels downstream — the problem is structurally self-reinforcing.
+- An off-label evidence transfer problem means the study was conducted in the wrong population, AND the normalization pathway was advocacy-driven rather than evidence-driven, AND the decisive test hasn’t been run — triply unjustified.
+
+State the compounding in one or two sentences: “The [X failure] compounds the [Y failure] because…”
+
+-----
+
+STEP 3: SOURCE-STATUS ASSESSMENT
+
+After reviewing all audit findings, identify what tier of evidence the load-bearing claims actually rest on.
+
+Use the source-status hierarchy:
+
+- Tier 1: Primary data
+- Tier 2: High-quality pre-registered empirical research
+- Tier 3: Systematic reviews / meta-analyses
+- Tier 4: Individual peer-reviewed studies
+- Tier 5: Guidelines and policy documents
+- Tier 6: Practitioner evidence
+- Tier 7: Journalism and secondary reporting
+- Tier 8: Anecdotal / informal reports
+- Tier 9: Author inference / speculation
+
+State: “The load-bearing claims rest primarily on Tier [X] evidence. The institutional deployment requires Tier [Y] evidence. The gap is [small / moderate / large / fatal].”
+
+Flag any tier laundering: where a low-tier claim has accumulated unearned authority by passing through progressively higher-tier citations without the original weakness being preserved.
+
+-----
+
+STEP 4: STRENGTH OF THE CORE CLAIM
+
+State directly how well-supported the main claim is after considering all identified problems and the source-status assessment.
+
+Answer these questions:
+
+- Does the claim survive serious scrutiny?
+- Which parts of the claim (if any) are adequately supported?
+- Which parts fail?
+- Is the failure a matter of degree (overclaimed but not baseless) or kind (the measurement doesn’t address the claim at all)?
+
+Be direct. Do not hedge unless the evidence genuinely requires it.
+
+-----
+
+STEP 5: OVERALL VERDICT
+
+Choose one of the following and justify the choice in 3–5 sentences:
+
+A. The claim is well-supported by the evidence.
+[The measurement matches the claim, the finding is reliable, and the downstream use is proportionate to the evidence.]
+
+B. The claim is partially supported but overstated or weakly evidenced.
+[Some evidence supports a narrower version of the claim, but the stronger version deployed in policy or public argument exceeds what the evidence supports.]
+
+C. The claim lacks adequate support and relies on significant methodological weaknesses.
+[The foundational measurement has serious proxy problems, replication failures, or citation laundering that prevent the claim from being treated as established.]
+
+D. The claim is not supported and appears to rest on flawed foundations.
+[The measurement does not address the claimed construct, the finding does not replicate, or the evidence base is circular and self-reinforcing rather than independently validated.]
+
+Do not choose B when D is accurate. Do not soften the verdict to appear balanced.
+
+-----
+
+STEP 6: CONCISE CHALLENGE STATEMENT
+
+Write one or two sentences that could be used in a published critique, a formal response, or a public thread. This should be:
+
+- Direct and specific
+- Suitable for formal or public use
+- Free of hedging language
+- Grounded in what the audits actually found
+
+Format: “[The claim] rests on [specific methodological problem]. The decisive test — [what would actually settle the question] — has not been run.”
+
+Or: “[Source] is cited as evidence that [claim]. The study actually shows [what it measured], which does not support [claim] because [specific gap].”
+
+-----
+
+STEP 7: WHAT WOULD CHANGE THIS VERDICT
+
+State specifically what evidence would upgrade the verdict. Be precise — not “more research” but “a pre-registered prospective study in [population] measuring [outcome] over [timeframe] with [controls], replicated by independent labs.”
+
+This is the decisive test specification. If no such test is conceivable, note that the claim may be unfalsifiable by design — which is itself a finding.
+
+-----
+
+REMINDER
+
+You are integrating, not summarizing.
+The individual prompts identified problems. This prompt asks which problems matter most, how they interact, and what the honest overall conclusion is.
+
+A finding that replicates cleanly but is overclaimed has one problem.
+A finding built on flawed data has a second problem.
+A finding that doesn’t replicate has a third problem.
+A claim that fails on construct validity, internal validity, and citation integrity simultaneously is not “complicated” — it is multiply invalid.
+
+Say so directly.
+
+You may begin with suspicion.
+You may not end with suspicion.
+
+Start wherever the anomaly appears.
+Finish with receipts.
