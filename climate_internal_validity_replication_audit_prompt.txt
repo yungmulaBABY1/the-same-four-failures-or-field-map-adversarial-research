@@ -1,0 +1,398 @@
+INTERNAL VALIDITY & REPLICATION AUDIT PROMPT — CLIMATE SCIENCE EDITION
+
+Purpose:
+
+This prompt audits the internal validity of a specific climate finding, dataset, or model-based analysis — whether the result itself is likely to be real, robust across independent methods, and free of analytic/model artifacts — before assessing what it claims or how it has been cited.
+
+Citation laundering and construct-validity problems operate on the output of a study. Homogenization artifacts, model tuning circularity, scenario misuse, and selective reporting corrupt the finding at the source. A finding that fails internal validity cannot support the claims built on it regardless of how many assessment-report cycles cite it or how strong the multi-model agreement looks downstream.
+
+This prompt also covers AI-assisted climate data analysis (e.g., using an LLM or automated pipeline to reanalyze station data, homogenize records, or summarize model output). The failure mode is identical to any other domain: a tool produces a confident output, the user lacks the domain knowledge to audit whether the output measures what the claim requires, and the output gets treated as a finding. The data-generation audit below applies to both human-conducted and AI-assisted analysis.
+
+Run this audit before or alongside the construct-validity audit. If the foundational finding fails internal validity, note this in the thesis. The claim is doubly weak: the study may not measure what it claims, and the finding may not be robust.
+
+-----
+
+INPUTS
+
+Provide the following:
+
+1. Foundational paper(s), dataset, or model analysis:
+
+[Paste citation, abstract, methods, results, and statistical/model reporting where available. For AI-assisted analysis, paste the prompt used, the output, and the dataset description. For model-based findings, specify model(s), version, forcing scenario, and ensemble configuration.]
+
+1. Central empirical or model-derived finding:
+
+[State the finding in one sentence: what effect/trend was found, in what spatial/temporal domain, measured or modeled how, of what magnitude, with what stated confidence.]
+
+1. Claimed construct and downstream use:
+
+[What is this finding used to prove in subsequent literature, IPCC assessment text, policy, or media — e.g., “unprecedented rate of change,” “this event was attributable to climate change,” “this region will experience X by 2100 under business as usual”?]
+
+1. Known independent-dataset or replication comparisons (if any):
+
+[Paste citations/comparisons and outcomes if known — e.g., cross-comparison across GISTEMP/HadCRUT/NOAA/BEST/satellite records, independent proxy networks, out-of-sample model hindcasts. If none known, state “unknown.”]
+
+1. Pre-specification / pre-registration status (if known):
+
+[Was the analysis method, model selection, or homogenization approach fixed before looking at the target period, or was it tuned/selected after seeing the result it needed to reproduce? Was this documented anywhere? If unknown, state “unknown.”]
+
+-----
+
+DATA-HONESTY RULE
+
+For every claim about data collection, model configuration, analysis choices, or independent-comparison status, state how it was determined:
+
+- reported in the paper itself
+- reported in supplementary materials / code repository
+- found in a pre-specified analysis plan or model protocol (e.g., CMIP experimental protocol)
+- found in independent-dataset comparison literature
+- found in methodological critique or post-publication review
+- model memory / needs verification
+- unknown / not reported
+
+Do not infer methodological soundness from the absence of information, and do not infer bad faith from the absence of information either. If status is unknown, state it clearly.
+
+-----
+
+SECTION A: DATA GENERATION AUDIT
+
+Run this section before any analysis audit. A finding built on flawed data or a miscalibrated model cannot be rescued by clean downstream statistics. AI-assisted analysis on flawed data produces confident wrong answers faster than any previous tool.
+
+1. How was this data collected or generated?
+
+- Instrumental record: which stations/platforms, what instrument history, what siting changes over time?
+- Satellite record: which platform(s), what orbital decay/calibration corrections applied, which processing version?
+- Proxy record: what physical basis (isotope ratio, ring width, coral band), what dating method, what calibration period against instrumental data?
+- Reanalysis product: which model assimilated which observations, and is it being used as if it were a pure observation?
+- Model output: which GCM/ESM, what resolution, what forcing scenario, single realization or ensemble?
+- Was the analysis observational, quasi-experimental (natural experiment), or purely model-based — and does the claim match that evidentiary status (e.g., is a model-based projection being described with the certainty language appropriate to a direct observation)?
+
+1. What selection effects shaped the dataset?
+
+- Which stations, proxy sites, or model runs are included?
+- Which are systematically excluded, and why (e.g., stations discontinued, proxy series dropped for “quality control” reasons, model runs excluded post-hoc for not reproducing observed trends)?
+- Is the spatial/temporal coverage representative of the domain the claim is made about (e.g., sparse Southern Hemisphere or pre-1900 coverage extrapolated to global claims)?
+- What survivorship bias might exist in long proxy or station records (only sites/instruments that persisted are available)?
+
+1. What does missingness look like?
+
+- How much data is missing across the record, and where (spatially, temporally)?
+- Is missingness random, or concentrated in ways that could bias the trend (e.g., poor early-record coverage in regions warming fastest or slowest)?
+- How was missingness/infilling handled (kriging, ensemble infilling, model-based gap-filling) — and does that method itself impose a trend assumption?
+
+1. What incentive structure governed data collection, model development, or reporting?
+
+- Who collected/maintains the dataset, and who benefits from a particular trend magnitude emerging (funding continuation, policy relevance, institutional mandate)?
+- For model development: was the model tuned to reproduce the 20th-century observational trend, and is it now being used to “predict” a similar trend — creating circularity?
+- For scenario selection: who selects which emissions scenario (e.g., RCP8.5 vs. SSP2-4.5) is foregrounded in a given analysis, and does that selection affect the headline magnitude?
+- Are there known cases where similar incentive structures (in this or adjacent scientific fields) produced distorted findings?
+
+1. For AI-assisted analysis specifically:
+
+- Was the dataset (station record, proxy series, model output) inspected for known artifacts (splice points, siting changes, tuning circularity) before analysis, or fed directly to the model?
+- Did the model flag data-quality issues (e.g., inhomogeneities, unusual gaps, scenario mislabeling) or proceed without surfacing them?
+- Were the analysis outputs checked against raw/independent data, or accepted as outputs?
+- Was the adversarial check run: “What is the strongest methodological critique of this analysis? What does this dataset/model actually measure that I might be mistaking for what I want it to measure? What would falsify this finding? Am I treating model ensemble spread as if it were a statistical confidence interval?”
+
+Required table:
+
+|Data source|Collection/generation method|Selection bias risk|Missingness pattern|Incentive structure risk|AI-analysis check run|
+
+|———–|—————————–|––––––––––|––––––––––|–––––––––––––|———————–|
+
+Risk options: Low / Moderate / High / Cannot assess
+
+AI-analysis check: Yes / No / Partial / N/A
+
+-----
+
+SECTION B: PRE-SPECIFICATION AND ANALYSIS PLAN
+
+1. Was the analysis method, model configuration, or homogenization approach specified before the target period/event was examined?
+
+- If yes: where documented (e.g., CMIP protocol, published methods paper predating the target analysis, pre-registration)?
+- If no: was any aspect specified after seeing preliminary results but before the final published analysis?
+- If unknown: note as unknown
+
+1. Did the published analysis match any pre-specified plan?
+
+- Were primary metrics (e.g., which temperature index, which baseline period) changed after initial results were seen?
+- Were additional metrics or regions added post-hoc because they showed a stronger effect?
+- Were model runs or ensemble members excluded post-hoc, and on what stated basis?
+- Were homogenization breakpoints or adjustment magnitudes changed after an initial pass showed an unexpected result?
+
+1. If not pre-specified: how many metrics, regions, or model configurations were examined before the reported one was selected?
+
+- What is the risk that the reported result reflects selection among many tested alternatives rather than a robust signal?
+
+Required table:
+
+|Pre-specification status|Analysis match|Metrics/configs tested|Metrics/configs reported|Post-hoc changes|Selection risk|
+
+|–––––––––––––|–––––––|————————|—————————|—————––|––––––––|
+
+Selection risk options: Low / Moderate / High / Severe / Cannot assess
+
+-----
+
+SECTION C: EFFECT SIZE, MODEL SPREAD, AND STATISTICAL POWER
+
+1. What is the reported effect size, trend magnitude, or attributable-risk ratio?
+1. How does this compare to:
+
+- The typical magnitude/spread reported by independent datasets or independent model groups for the same quantity?
+- The minimum magnitude that would be physically or practically meaningful?
+- Later corrected estimates, updated reanalyses, or expanded model ensembles?
+
+1. What is the sample size (station-years, proxy-years, ensemble members, event count for attribution studies)?
+1. What is the actual source of the reported uncertainty range?
+
+- Is it a statistical confidence interval from repeated independent sampling?
+- Is it multi-model ensemble spread (structural/scenario uncertainty, not a classical confidence interval)?
+- Is it internal variability from a single model’s control run?
+- Is this distinction made clear in the source, or is ensemble spread being presented with the rhetorical weight of a statistical confidence interval?
+
+1. Winner’s-curse-style assessment: for single-event attribution studies or newly-flagged regional trends, is the reported magnitude likely inflated by having been selected because it was notable/extreme in the first place?
+
+Required table:
+
+|Reported effect/trend|Independent-dataset range|Corrected/updated estimate|Sample size (station-yrs/ensemble members)|Uncertainty type (CI vs. ensemble spread)|Selection-inflation risk|
+
+|———————–|––––––––––––––|——————————|———————————————–|———————————————|––––––––––––––|
+
+Selection-inflation risk options: Low / Moderate / High / Cannot assess
+
+-----
+
+SECTION D: HARKING (HYPOTHESIZING AFTER RESULTS ARE KNOWN) — INCLUDING EVENT ATTRIBUTION
+
+1. Is the central finding presented as testing a pre-specified question, or as an exploratory/post-hoc analysis of an event or trend that was first noticed and then explained?
+1. For event-attribution studies specifically: was the event class, region, and metric defined before the event occurred (protocol-driven, e.g., World Weather Attribution’s standard rapid-attribution protocol) or defined after the event to match its specific characteristics?
+1. Does the introduction describe a specific directional hypothesis that matches the result?
+
+- If yes: was this hypothesis specified in a protocol or prior publication before the target data was examined?
+- If no: are there signs of the hypothesis being fitted to the result post-hoc?
+
+1. Are there signs of post-hoc metric/region selection?
+
+- Was a particular temperature index, baseline period, or region chosen because it showed the clearest signal, without pre-specification?
+- Is a model-selection choice (which GCMs to include in an ensemble) made after seeing which models reproduce the desired result?
+
+1. Does the discussion present exploratory or single-event findings as if they had the evidentiary weight of a pre-specified, repeated-sampling result?
+
+Required table:
+
+|Hypothesis/protocol type|Pre-specified?|HARKing indicators|HARKing risk|
+
+|—————————|—————–|–––––––––––|––––––––|
+
+HARKing risk options: Low / Moderate / High / Cannot assess
+
+-----
+
+SECTION E: SELECTIVE REPORTING
+
+1. Are all pre-specified metrics/regions/model runs reported?
+
+- If not: which are missing, and is there a plausible non-selective explanation?
+
+1. Are there signs of selective regional or subgroup reporting?
+
+- Is the reported trend/effect found across the full domain, or only in a subregion highlighted because it showed the clearest signal?
+- Was that subregion specified in advance?
+
+1. Are there signs of selective time-window reporting?
+
+- Is the reported trend robust across multiple reasonable baseline/end-period choices, or does it depend on a specific start/end point?
+- Was the reported window pre-specified, or chosen because it maximized the apparent trend?
+
+1. Publication/reporting bias assessment:
+
+- Is this a high-profile “record-breaking” or “unprecedented” framing in a high-impact venue?
+- Are there known independent analyses that found a smaller, null, or differently-signed result?
+- Is the reported magnitude unusually large compared to independent datasets or later revisions (consistent with selection/reporting bias)?
+
+Required table:
+
+|Metrics/regions pre-specified|Metrics/regions reported|Missing metrics/regions|Window/subregion selectivity|Reporting bias indicators|
+
+|––––––––––––––––|––––––––––––––|––––––––––––––|––––––––––––––––|——————————|
+
+-----
+
+SECTION F: INDEPENDENT-DATASET AND REPLICATION STATUS
+
+This section is the climate-science analog of direct replication: cross-comparison across independently constructed datasets and independent model groups.
+
+1. Has the finding been checked against independently constructed observational datasets?
+
+- E.g., does the trend appear consistently across GISTEMP, HadCRUT, NOAAGlobalTemp, Berkeley Earth, and satellite (RSS/UAH) records?
+- Do these independent series agree in magnitude and sign, or is there meaningful divergence?
+- Were any of these datasets constructed using overlapping raw station inputs (reducing true independence)?
+
+1. Has the finding been checked against independent model groups or independent proxy networks?
+
+- Do multiple, structurally different GCMs/ESMs (not just multiple runs of the same model family) reproduce the result?
+- Do independently developed proxy networks (different physical basis — e.g., ice core vs. tree ring vs. coral) agree?
+- Is agreement driven by shared forcing inputs/tuning targets rather than independent confirmation?
+
+1. Effect/trend trajectory across dataset revisions:
+
+- Has the reported trend or event-attribution ratio shifted materially across successive dataset versions or model generations (e.g., CMIP5 to CMIP6)?
+- What is the current best independent-consensus estimate?
+- Does that current best estimate support the downstream claims built on the original finding?
+
+Required table:
+
+|Independent datasets checked|Agreement level|Independent model groups checked|Agreement level|Best current estimate|Trend/magnitude shift over revisions|
+
+|––––––––––––––––|——————|———————————––|——————|—————————|——————————————|
+
+-----
+
+SECTION G: DATA AND CODE AVAILABILITY
+
+1. Is the underlying station, proxy, satellite, or model-output data publicly available?
+1. Is the processing/homogenization/analysis code publicly available?
+1. Has anyone attempted an independent reanalysis of the original raw data using a different method?
+
+- If yes: what did the reanalysis find — consistent, smaller, larger, or differently-signed result?
+
+1. Are there known data irregularities, flagged breakpoints, or post-publication concerns?
+
+- Has the paper, dataset, or homogenization method been flagged in post-publication review or methodological critique literature?
+- Have any authors or agencies issued corrections, updated versions, or documented breakpoint adjustments?
+
+Required table:
+
+|Data available|Code available|Independent reanalysis attempted|Reanalysis result|Post-publication flags|Corrections/versions issued|
+
+|––––––––|—————–|–––––––––––––––––––|–––––––––––|—————————|–––––––––––––––––|
+
+-----
+
+SECTION H: SUMMARY TABLE — INTERNAL VALIDITY
+
+Complete this table:
+
+|Dimension |Assessment|Severity|Notes|
+
+|—————————––|–––––|––––|—–|
+
+|Data/model generation quality | | | |
+
+|Selection bias | | | |
+
+|Missingness/infilling handling | | | |
+
+|Incentive structure risk | | | |
+
+|Pre-specification | | | |
+
+|Analysis plan compliance | | | |
+
+|Selection/HARKing risk | | | |
+
+|Effect/trend plausibility | | | |
+
+|Uncertainty-type clarity (CI vs. ensemble spread)| | | |
+
+|Selection-inflation risk | | | |
+
+|Selective reporting | | | |
+
+|Independent-dataset agreement | | | |
+
+|Independent-model agreement | | | |
+
+|Trend/magnitude stability across revisions| | | |
+
+|Data/code availability | | | |
+
+|Post-publication flags | | | |
+
+Severity options: None / Minor / Moderate / Major / Fatal / Cannot assess
+
+-----
+
+SECTION I: INTERNAL VALIDITY VERDICT
+
+Classify the finding using this scale:
+
+A. Strong — method pre-specified or protocol-driven, confirmed across independently constructed datasets and structurally independent models, magnitude stable across revisions, data/code available, data generation process sound
+
+B. Acceptable — minor design limitations, broadly confirmed across independent datasets/models if not identically, magnitude plausible, data generation concerns minor
+
+C. Weak — limited independent-dataset checking, magnitude possibly inflated by selection, design concerns present, or data generation concerns moderate
+
+D. Suspect — multiple internal validity problems, meaningful divergence across independent datasets/models, magnitude likely inflated, or data generation seriously compromised
+
+E. Invalid — fails to replicate across independently constructed datasets/models, evidence of post-hoc metric/region selection or model-tuning circularity, finding likely an artifact of analytic choices, or data generation fatally flawed
+
+F. Cannot assess — insufficient reporting to evaluate
+
+Do not choose a weaker verdict when a stronger one is accurate. If multiple problems compound across sections, the verdict should reflect the compounding — not average across dimensions or soften because individual problems seem minor in isolation. A finding with moderate selection risk, moderate HARKing risk, and meaningful independent-dataset divergence is not “Weak” — it is “Suspect” or “Invalid.”
+
+Then answer:
+
+1. Is the foundational finding likely to be real (i.e., a genuine physical signal rather than an artifact of data processing, model tuning, or selective reporting)?
+1. If it is real, is its magnitude sufficient — and its uncertainty type appropriate — to support the downstream claims built on it?
+1. What is the best current independent-consensus estimate of the true magnitude?
+1. What independent-dataset or independent-model evidence would upgrade this verdict?
+1. What is the decisive test that has not been run (e.g., an out-of-sample model hindcast, an independently-developed proxy check, a structurally different model family confirmation)?
+1. For AI-assisted analysis: did the adversarial check surface proxy or circularity failures the original analysis missed?
+
+-----
+
+SECTION J: INTEGRATION WITH CONSTRUCT VALIDITY AUDIT
+
+After completing this audit, note:
+
+1. If the finding is suspect or invalid (D/E), the construct-validity problem is secondary — the foundational claim is doubly weak.
+1. If the finding is acceptable or strong but construct validity fails (e.g., a robust global-mean trend used to support a specific unsupported regional or single-event claim), the finding may be internally valid but externally overclaimed.
+1. If both internal validity and construct validity fail, note the compounding failure: the study may not measure what it claims AND the finding may not be robust.
+1. If the data/model generation is compromised (e.g., tuning circularity, homogenization artifact, unrepresentative spatial coverage), note this as a third compounding failure: the study may not measure what it claims, the finding may not be robust, AND the underlying data/model may not represent the domain the claim is made about.
+
+The decisive-test sentence should integrate all applicable failures:
+
+“The foundational finding [is/is not] likely to be robust based on current independent-dataset and independent-model evidence, AND the construct being measured [does/does not] validly represent the downstream claim, AND the data/model generation process [does/does not] support generalization to the claimed spatial/temporal domain — meaning the policy/institutional deployment rests on [a robust but overclaimed finding / an unreliable finding being overclaimed / a finding from unrepresentative data or a circularly-tuned model being overclaimed / all three].”
+
+-----
+
+SECTION K: FINAL ONE-PARAGRAPH SUMMARY
+
+Write one paragraph summarizing:
+
+- Whether the foundational finding is likely robust
+- The current best independent-consensus estimate of the true magnitude
+- The independent-dataset/independent-model agreement status
+- The data/model generation quality
+- The internal validity verdict
+- How internal validity failures compound or modify the construct-validity assessment
+- What the decisive test would look like
+
+This paragraph should be direct, evidence-based, and free of unnecessary reassurance language in either direction — do not add reassurance that “the broader consensus still holds” if that is not what this specific audit established, and do not imply the broader consensus is undermined by a narrow finding’s flaws. State the verdict plainly, scoped to this specific finding. Do not hedge unless the evidence genuinely requires it. If the finding is unlikely to be robust, say so. If multiple failure modes compound, name the compounding explicitly rather than softening into a general “limitations” framing.
+
+-----
+
+REMINDER
+
+This prompt audits the finding itself — whether the result is real and stable across independent methods — before asking what it proves.
+
+A finding that checks out cleanly across independent datasets but is overclaimed downstream has one problem.
+
+A finding built on flawed or circularly-tuned data/models has a second problem.
+
+A finding that doesn’t hold up across independently constructed datasets or model families has a third problem.
+
+A finding that fails independent-dataset checking AND is overclaimed AND is built on flawed data is triply invalid.
+
+None of this is a verdict on the underlying physics of greenhouse-gas forcing at the global scale, which rests on a much broader and more robust evidentiary base than any single paper this prompt will be run against. Keep the scope of each verdict explicit and narrow to the specific finding under audit.
+
+You may begin with suspicion.
+
+You may not end with suspicion.
+
+Start wherever the anomaly appears.
+
+Finish with receipts.
