@@ -1,0 +1,591 @@
+CONSTRUCT-VALIDITY AUDIT PROMPT — CLIMATE SCIENCE EDITION (v2)
+
+CLAIM VS. MEASUREMENT
+
+Purpose:
+
+Use this prompt to audit one paper, dataset, model output, IPCC chapter/SPM statement, or institutional claim before making any broad claim about the state of climate science on a given question.
+
+Do not evaluate whether the authors, the IPCC, or a given research group are acting in good faith.
+
+Do not infer private motive (funding source, political affiliation) as a substitute for methodological analysis.
+
+Do not summarize the source politely.
+
+Do not defer to prestige, peer review, journal status, citation count, IPCC confidence language, model intercomparison consensus, or the political salience of the conclusion.
+
+Do not treat “the models agree” as evidence that the underlying physical measurement is sound — model agreement can reflect shared structural assumptions (shared parameterizations, shared tuning targets, shared forcing datasets) rather than independent confirmation.
+
+Your task is narrower:
+
+Compare what the source actually measured or modeled to what the source claims, and to what later citations, assessment reports, media, or advocacy use it to prove.
+
+The point is not to decide whether climate change is real or whether the field is corrupt.
+
+The point is to test whether the specific measurement, proxy, or model output supports the specific claim being made with it.
+
+-----
+
+HOW TO USE THIS PROMPT
+
+Paste the relevant source material below:
+
+- Abstract
+- Methods (instrumentation, proxy type, model configuration, reanalysis product, statistical method)
+- Data / forcing inputs used
+- Spatial and temporal domain
+- Results
+- Conclusion / Summary for Policymakers language if applicable
+- Any key figures or quoted confidence statements
+- If available: how later papers, IPCC assessment chapters, media, or advocacy groups cite this source
+
+Then provide:
+
+1. The contested claim this source is being used to support.
+1. The sub-field or debate where the source is being used (e.g., attribution, paleoclimate reconstruction, regional impact projection, tipping-point risk, mitigation cost-benefit).
+1. Any domain-specific concern you want tested.
+
+-----
+
+INPUT TEMPLATE
+
+Source title:
+
+[PASTE TITLE HERE]
+
+Source citation / link:
+
+[PASTE CITATION OR LINK HERE]
+
+Contested claim:
+
+[WHAT IS THIS SOURCE BEING USED TO PROVE? e.g., “current warming rate is unprecedented in the Holocene,” “this specific flood event was made X% more likely by anthropogenic forcing,” “RCP8.5 represents a plausible business-as-usual trajectory”]
+
+Sub-field / debate:
+
+[e.g., paleoclimate reconstruction, instrumental temperature record, attribution science, GCM projection, sea-level rise, tipping points, economic damage functions]
+
+Source excerpts:
+
+[PASTE ABSTRACT / METHODS / RESULTS / CONCLUSION / KEY FIGURES / CONFIDENCE LANGUAGE HERE]
+
+Later citation use, if available:
+
+[PASTE HOW LATER PAPERS, IPCC CHAPTERS, SPM TEXT, OR MEDIA DESCRIBE THIS SOURCE]
+
+Domain-expert concern:
+
+[WHAT SMELLS WRONG TO YOU? e.g., proxy divergence, homogenization artifact, model circularity, ensemble spread reported as confidence interval, single-model result generalized as consensus, undisclosed analytic choices]
+
+-----
+
+AUDIT INSTRUCTIONS
+
+You are auditing construct validity.
+
+Do not begin by balancing the source with generic praise for climate science as an enterprise.
+
+Do not add reassurance clauses unless they are doing real evidentiary work.
+
+Do not use phrases like “it is important to acknowledge the scientific consensus” or “this does not undermine the broader picture” unless the qualification is necessary to prevent factual overstatement about THIS source’s specific measurement.
+
+Do not soften “invalid proxy” or “circular tuning” into “minor limitation” if the measurement cannot support the claim as stated.
+
+Do not treat IPCC confidence labels (likely, very likely, virtually certain), peer review, or multi-model agreement as evidence that a specific construct was measured correctly — evaluate the underlying measurement on its own terms.
+
+Do not treat “climate change is real and anthropogenic” as a proxy for “this specific claim, in this specific paper, using this specific method, is well-supported.” Global-scale attribution of warming to greenhouse gases is a different, much more robust claim than most of the specific downstream claims (regional impacts, single-event attribution, tipping-point timing, damage-function magnitude) this audit will actually be applied to. Keep these separate.
+
+Answer the following sections.
+
+-----
+
+1. EXACT CLAIM EXTRACTION
+
+Identify three levels of claim:
+
+A. Strongest claim made by the source itself:
+
+[Extract the strongest claim the authors make, including any hedging language in the original — e.g., “likely,” “consistent with,” “cannot rule out.”]
+
+B. Weaker defensible claim actually supported by the data:
+
+[State the narrower claim the study/dataset/model run may support.]
+
+C. Inflated claim made by later citations, IPCC summary text, media, or advocacy:
+
+[State how the source is being used beyond its evidence — e.g., a “likely” attribution finding restated as certain, a single-model regional projection restated as “the science says.”]
+
+Then answer:
+
+- Are A, B, and C the same claim?
+- Where does inflation occur — at the paper’s own abstract/press release, at the assessment-report synthesis stage, or at the media/advocacy stage?
+- Does the source itself overclaim, or is the overclaim mainly downstream?
+
+-----
+
+1. PRE-SPECIFICATION & RESEARCHER DEGREES OF FREEDOM AUDIT
+
+Before evaluating what was measured, evaluate how many defensible ways it could have been measured, and whether the path actually taken was fixed before or after the results were seen. This section operationalizes the “garden of forking paths” (Gelman & Loken) and researcher-degrees-of-freedom (Simmons et al.) concern for proxy and model-based climate work specifically.
+
+Ask:
+
+- Was the exact analytic pipeline — proxy inclusion/exclusion criteria, centering or normalization convention, number of retained principal components, choice of verification/skill metric, uncertainty-propagation method, homogenization breakpoint rules — specified in writing (a methods section drafted before results were seen, a public analysis plan, a registered report, or an established prior protocol such as a CMIP experimental design) before the data were analyzed?
+- If not pre-specified, map the major forking paths actually available at each analytic decision point: proxy network composition, screening/exclusion rules, PCA transformation or centering convention, which verification statistic is emphasized in the abstract, how core-top ages or age-model uncertainty were handled, which baseline period was chosen.
+- Were alternative, equally defensible choices at each fork tested (multiverse analysis, specification-curve analysis, systematic sensitivity analysis)? If not, estimate the plausible range of outcomes under one or two reasonable alternative choices, if inferable from the source or supplementary material.
+- Is there evidence of HARKing — a hypothesis, headline metric, or framing that reads as though it were the original target, but that a plausible reconstruction of the analytic timeline suggests was selected or emphasized only after preliminary results were seen (e.g., a rate-of-change claim foregrounded in the abstract or press release after resolution/smoothing limitations became apparent during review)?
+
+Classify:
+
+Analytic decision point | Choice made | Pre-specified? | Alternative choices tested? | Risk this choice was outcome-driven
+
+Risk options: Low / Moderate / High / Cannot assess
+
+Why this matters: many contested reconstructions and attribution studies turn on exactly this kind of undisclosed or post-hoc analytic choice (e.g., decentered PCA conventions, post-hoc core-top re-dating, proxy dropout rules applied unevenly, baseline-period selection for a trend claim). This section makes those choices visible and puts the burden on the source to show the path was principled rather than outcome-seeking.
+
+-----
+
+1. MEASUREMENT EXTRACTION
+
+State exactly what was measured or modeled.
+
+Include:
+
+- Data type: instrumental record, satellite record, reanalysis product, proxy (ice core, tree ring, coral, sediment, speleothem), GCM/ESM output, statistical/empirical model, economic damage function
+- Spatial coverage vs. claimed spatial scope (station-level, regional, global)
+- Temporal coverage, resolution, and calibration period vs. reconstruction/projection period
+- Model configuration: which model(s), which forcing scenario(s) (RCP/SSP), ensemble size, single-realization vs. ensemble-mean
+- Homogenization, splicing, bias-correction, or detrending method applied
+- Control variables / confounding forcings accounted for (solar, volcanic, ENSO, aerosols, land-use)
+- Exclusions (stations dropped, proxy series excluded, model runs discarded)
+- What was not measured (e.g., a temperature reconstruction does not measure impact; a GCM temperature projection does not measure regional precipitation with the same skill)
+
+Then answer:
+
+- Is the measured/modeled variable direct evidence of the claimed construct?
+- Or is it a proxy or model-derived estimate?
+- If it is a proxy or model output, how close is it to the target construct, and what is the known uncertainty/error structure (proxy calibration error, model structural uncertainty, internal variability)?
+
+-----
+
+1. PROXY SYSTEM MODEL & PROCESS FIDELITY CHECK
+
+This section applies when the source relies on a paleoclimate proxy, and pushes past pure statistical calibration into whether the physical/biological process linking climate to the archive is understood and tested.
+
+Ask:
+
+- Did the study use a process-based proxy system model (PSM) that explicitly simulates the physical, biological, or geochemical process linking the climate variable to the measured proxy signal (e.g., how tree cellular growth responds to temperature and moisture, how coral geochemistry responds to sea-surface conditions) — or does it rely only on statistical (empirical) calibration against an instrumental period, with the mechanism treated as a black box?
+- Were key process assumptions tested or explicitly acknowledged: linearity of the climate-proxy relationship, stationarity of that relationship across different boundary conditions (orbital configuration, CO2 level, ice-sheet extent, ecological succession), seasonality bias (e.g., many marine proxies are weighted toward a particular season; tree rings reflect only the growing season, not the annual mean), and non-climate drivers of the proxy signal (CO2 fertilization effects on tree growth, moisture or nutrient limitation, diagenetic alteration)?
+- How was the mismatch between what the proxy physically records (e.g., local, season-weighted sea-surface temperature) and the claimed target construct (e.g., global annual-mean surface air temperature) quantified, and was that mismatch propagated into the final uncertainty estimate, or silently absorbed into the calibration step?
+- If no PSM was used and calibration is purely statistical, does the source at least test for non-stationarity by checking whether the calibration relationship holds across an independent sub-period, rather than assuming a single calibration-period relationship holds across the full reconstruction interval?
+
+Verdict:
+
+- Process-based (PSM) validation performed and reported
+- Statistical calibration only, non-stationarity explicitly tested
+- Statistical calibration only, non-stationarity assumed, not tested
+- Process mismatch (seasonality, non-climate driver) acknowledged but not quantified
+- Process mismatch not acknowledged — treat as an undisclosed limitation
+
+-----
+
+1. CLAIM VS. MEASUREMENT TABLE
+
+Create a table with these columns:
+
+Measured/modeled variable | Claimed construct | Are they the same? | Gap | Severity | Notes
+
+Severity options:
+
+- No meaningful gap
+- Minor limitation
+- Moderate proxy/model gap
+- Major construct mismatch
+- Fatal proxy/model failure for the claim being made
+
+Use the strongest severity justified by the evidence.
+
+Do not understate the severity to sound balanced, and do not overstate it to sound skeptical.
+
+-----
+
+1. UNCERTAINTY BUDGET & VALIDATION RIGOR
+
+Ask:
+
+- Decompose the full uncertainty budget: calibration error, chronological/age-model error, proxy measurement error, structural/method error (choice of statistical method itself), spatial-representativeness/sampling error, and non-stationarity error. Which of these were quantified and propagated into the final reported uncertainty, and which were left out, assumed negligible without justification, or not mentioned?
+- Were pseudoproxy experiments performed — i.e., was the reconstruction method validated on synthetic data generated from a climate-model “true” state, run through a simulated proxy network with realistic sparsity, noise, and non-stationarity, to see whether the method recovers the known truth? If performed, what did they show about the method’s skill, systematic bias (e.g., variance loss / attenuation of past extremes), and failure modes?
+- What out-of-sample validation was performed: temporal hold-out (calibrate on one period, verify on a withheld period), spatial cross-validation, proxy-type hold-out, or comparison against an independent archive? Report the full suite of skill metrics used (e.g., RE, CE, R², sign test) rather than only the most favorable one, and note if the source reports only a subset.
+
+Required table:
+
+Uncertainty source | Quantified? | Propagated into final estimate? | Magnitude (if known) | Omission risk
+
+Omission risk options: Low / Moderate / High / Fatal for the precision being claimed
+
+-----
+
+1. LEVEL-OF-ANALYSIS CHECK
+
+At what level was the evidence collected or generated?
+
+Examples:
+
+- Single proxy site / single station
+- Regional proxy network / regional station network
+- Global instrumental composite
+- Single model, single realization
+- Multi-model ensemble mean
+- Multi-model ensemble spread (structural uncertainty)
+- Reanalysis product (model-assimilated, not pure observation)
+- Downscaled regional projection
+- Economic/impact model driven by climate model output
+
+At what level is the claim being applied?
+
+Examples:
+
+- Global mean temperature trend
+- Regional/local climate impact
+- Single extreme-weather event attribution
+- Tipping-point timing or probability
+- Economic damage or GDP-loss projection
+- Policy-relevant “business as usual” scenario framing
+- Species/ecosystem-level impact claim
+
+Then answer:
+
+- What assumptions are required to bridge the evidence level to the claim level (e.g., from global ensemble mean to a specific regional/local outcome)?
+- Are those assumptions tested, or merely implied by using the model output as if it were a direct observation?
+- Would a domain expert (e.g., a regional climatologist, an actuary, an agronomist) accept the bridge as valid for the specific claim?
+- If the claim rests on a single emissions scenario (e.g., RCP8.5), is that scenario being presented as a likely/central trajectory or as a high-end bound? Is that distinction preserved downstream?
+
+-----
+
+1. CONFOUND AUDIT
+
+Identify obvious confounds.
+
+Ask:
+
+- What variables could explain the measured/modeled outcome besides the proposed explanation (e.g., urban heat island contamination in station records, ENSO/volcanic noise misattributed to secular trend, land-use change conflated with radiative forcing, instrument/platform changes in a spliced record)?
+- What confounds would a practitioner immediately notice (e.g., a station-network expert flagging siting changes, a dendroclimatologist flagging the divergence problem, a modeler flagging that the model was tuned to reproduce the 20th-century trend it is now being used to “predict”)?
+- Did the authors control for or explicitly test these confounds?
+- Did the authors acknowledge them?
+- Did later citations (assessment chapters, media, advocacy) drop the acknowledged confounds and retain only the headline result?
+- Would the omitted confounds change the interpretation or the confidence level assigned?
+
+Classify each confound:
+
+Confound | Domain obvious? | Controlled? | Acknowledged? | Impact if omitted
+
+Impact options:
+
+- Low
+- Moderate
+- High
+- Fatal for the strong claim
+
+-----
+
+1. ECOLOGICAL / OBSERVATIONAL VALIDITY CHECK
+
+Ask:
+
+- Does the model or proxy resemble the real-world physical process being explained, at the spatial/temporal scale claimed?
+- Does the calibration period/population resemble the period/domain the claim is applied to (e.g., is a proxy calibrated against a 20th-century instrumental period being extrapolated across a much longer or climatically different paleo interval)?
+- Does the temporal resolution match the claimed process (e.g., decadal model output used to make claims about single-event attribution)?
+- Is the study measuring a physical quantity, a model-derived estimate, an economic projection built on a model-derived estimate, or public/media framing of risk — and are these being conflated?
+- Is internal (natural) variability distinguished from forced trend, and is that distinction preserved in the claim?
+
+Verdict:
+
+- High observational/ecological validity
+- Moderate observational/ecological validity
+- Low observational/ecological validity
+- Valid only for a narrower claim (e.g., valid for global mean trend, not valid for regional/local claim)
+- Not valid for the claim being made
+
+-----
+
+1. CONVERGENT VALIDITY WITH STRUCTURALLY INDEPENDENT EVIDENCE
+
+This section tests whether the claim is robust across genuinely independent lines of evidence, or is an artifact of one dominant proxy class or method.
+
+Ask:
+
+- What do structurally independent, non-overlapping archives or methods show for the same region and time window — e.g., boreholes, speleothem oxygen-isotope records, glacier length records, maximum latewood density chronologies, documentary/historical records, independent sediment proxies, or independently developed model families? “Structurally independent” means a different physical or biological basis, not just a different research group using the same proxy type.
+- Where these independent lines conflict with the target reconstruction or finding, how is the discrepancy explained, reconciled, or left unresolved?
+- Does the claim survive when restricted only to the subset of evidence that is structurally independent of the dominant proxy or method (e.g., does a temperature claim built mainly on tree-ring width hold up when tree-ring evidence is set aside and only isotope- or ice-core-based evidence is considered)?
+- Is apparent “consensus” across cited studies actually independent confirmation, or do the studies share the same underlying proxy network, the same forcing dataset, or the same tuning target?
+
+Verdict:
+
+- Strong convergent validity — confirmed across structurally independent, non-overlapping evidence
+- Partial convergent validity — confirmed by some independent lines, contradicted or untested by others
+- Weak convergent validity — dominated by one proxy class or model family, independent confirmation thin or absent
+- Apparent consensus is non-independent (shared inputs/tuning, not genuine convergence)
+
+-----
+
+1. DECISIVE-TEST CHECK
+
+What test would directly measure the claimed construct?
+
+Answer:
+
+- What would the decisive test measure (e.g., an independent proxy network with a different physical basis, an out-of-sample model hindcast not used in tuning, a longer instrumental baseline, an independent reanalysis product)?
+- What spatial/temporal domain would it cover?
+- What controls would be required (confounding forcings isolated, internal variability characterized)?
+- What specific outcome would support the source’s claim?
+- What specific outcome would weaken or falsify it? State this as an explicit falsification criterion, not just a vague “more data would help.”
+- Does the current source run that test?
+- If not, does the field (via assessment reports or review literature) acknowledge that the decisive test has not been run, or is the gap papered over with confidence language?
+
+Then state:
+
+“The decisive test would be: [ONE-SENTENCE TEST SPECIFICATION]. It would be falsified by: [ONE-SENTENCE FALSIFICATION CRITERION].”
+
+-----
+
+1. CITATION-USE AUDIT
+
+If later papers, IPCC assessment chapters, SPM text, media, or advocacy cite this source:
+
+Ask:
+
+- Are they citing the actual finding, with its original hedging language intact?
+- Are they citing an inflated version (e.g., “likely” become “will,” a single-model regional result become “the science shows,” an RCP8.5 scenario become “business as usual”)?
+- Are they using the source as evidence, or as a rhetorical premise?
+- Does the source become stronger through repetition across assessment cycles than it was in the original methods (citation accretion)?
+- Does the citation chain preserve the uncertainty bounds and caveats present in the underlying chapter, or does the SPM/media layer strip them?
+- Is model ensemble spread being reported as a statistical confidence interval, when it is actually structural/scenario uncertainty across different models and assumptions?
+- If this source is one input among several in a larger synthesis or meta-analysis, is there evidence of selective inclusion — were null, small-effect, or contradicting studies available but left out of the synthesis?
+
+Classify the downstream use:
+
+- Accurate citation
+- Slightly inflated citation
+- Major inflation
+- Citation laundering
+- Premise laundering (scenario framing, e.g., RCP8.5-as-BAU, presented as settled input rather than contested assumption)
+- Unsupported consensus construction
+
+-----
+
+1. IGNORED-LITERATURE CHECK
+
+Ask:
+
+- What adjacent literatures should have been cited (e.g., proxy divergence-problem literature, independent reanalysis comparisons, structural-uncertainty literature across CMIP generations, critiques of specific homogenization algorithms)?
+- What contrary or complicating findings were available but structurally underweighted (e.g., satellite vs. surface record discrepancies, papers questioning a specific widely-used reconstruction, papers showing scenario probability weighting for RCP8.5)?
+- Did the source cite those literatures?
+- Did later assessment-report syntheses cite them, or smooth over the disagreement?
+- Are there legitimate methodological critiques being conflated with denialist rhetoric, such that raising them is treated as illegitimate rather than evaluated on the merits?
+
+Create a table:
+
+Ignored literature / evidence | Why it matters | Was it cited? | Effect of omission
+
+Effect options:
+
+- Minor context loss
+- Moderate weakness
+- Major evidentiary gap
+- Fatal omission for the strong claim
+
+-----
+
+1. REPRODUCIBILITY & COMPUTATIONAL AUDIT
+
+Ask:
+
+- Are the exact data (raw and processed), analysis code, and computational environment (including random seeds for any Monte Carlo or resampling steps) publicly archived and sufficient to exactly reproduce the published numbers, tables, and figures?
+- Has anyone independently attempted to re-run the published pipeline on the archived data and code? If so, did they reproduce the published result exactly, approximately, or not at all?
+- Is there a lightweight risk-of-bias profile across the analytic pipeline — modeled loosely on tools like ROBINS-I but adapted for proxy/model work — covering: proxy or model selection, measurement/processing choices, analysis-decision choices, and reporting choices? Rate each as Low / Some concerns / High risk of bias, with one sentence of justification.
+
+Required table:
+
+Data archived? | Code archived? | Independent re-run attempted? | Re-run result | Risk-of-bias (selection / processing / analysis / reporting)
+
+-----
+
+1. SOURCE-STATUS LABELS
+
+Assign labels to each type of evidence in the source.
+
+Use these labels:
+
+- Primary empirical evidence (direct instrumental/satellite measurement)
+- Proxy evidence (calibrated reconstruction)
+- Weak proxy (poorly calibrated, low replication, single-site)
+- Model-derived estimate (single realization)
+- Model-derived estimate (ensemble mean/spread)
+- Reanalysis product (model-assimilated hybrid)
+- Secondary synthesis / review
+- Systematic review / meta-analysis
+- IPCC assessment chapter (expert synthesis with formal confidence language)
+- IPCC Summary for Policymakers (politically negotiated synthesis)
+- Economic/impact model built on climate model output (compounded uncertainty)
+- Citation-laundered premise
+- Practitioner / domain observation
+- Public reporting / journalism / advocacy framing
+- Author inference
+- Unverified source lead
+
+Then state:
+
+- Which claims are directly measured?
+- Which claims are model-derived estimates?
+- Which claims are inferred or scenario-dependent?
+- Which claims require a source audit before being used as a policy premise?
+
+-----
+
+1. VERDICT
+
+Choose one primary verdict:
+
+A. Valid evidence for the claim
+
+B. Partial evidence with clear limits
+
+C. Useful for a narrower claim, invalid for the stronger claim
+
+D. Major proxy/model failure
+
+E. Fatal construct-validity failure for the claim being made
+
+F. Citation-laundered premise: weak or hedged original evidence inflated into apparent consensus certainty
+
+G. Insufficient information to judge without the full source
+
+Then explain the verdict in 3-6 sentences.
+
+Do not hedge unless the evidence requires it.
+
+Do not soften the verdict for political comfort in either direction — do not inflate confidence to seem responsible, and do not deflate confidence to seem contrarian.
+
+If the study is useful for a narrower claim, say so.
+
+If it fails for the strong claim, say that directly.
+
+-----
+
+1. PAPER-SAFE WORDING
+
+Write four versions:
+
+A. Neutral summary sentence:
+
+[One sentence accurately summarizing what the source found, preserving original hedging language.]
+
+B. Direct methodological critique:
+
+[One sentence stating the main measurement/construct/model problem.]
+
+C. Strong adversarial version:
+
+[One sharper sentence suitable for a methodological challenge, without veering into denialist framing or motive-attribution.]
+
+D. Decisive-test sentence:
+
+[One sentence saying what evidence would actually settle the question.]
+
+-----
+
+1. FAILURE-MODE CLASSIFICATION
+
+Mark which failure modes are present:
+
+[ ] Untested premise
+
+[ ] Undisclosed researcher degrees of freedom / forking-paths risk
+
+[ ] HARKing (hypothesis or headline metric fitted after results seen)
+
+[ ] Proxy problem
+
+[ ] Weak proxy
+
+[ ] Fatal proxy failure
+
+[ ] Process/seasonality mismatch not quantified (proxy system model gap)
+
+[ ] Incomplete uncertainty budget (error sources omitted or unpropagated)
+
+[ ] No pseudoproxy or out-of-sample validation performed
+
+[ ] Model circularity (tuned to reproduce the observation it is used to explain/predict)
+
+[ ] Ensemble spread misreported as confidence interval
+
+[ ] Scenario-as-fact framing (e.g., RCP8.5-as-BAU)
+
+[ ] Level-of-analysis error (global-to-regional/local, ensemble-to-single-event)
+
+[ ] Ecological/observational-validity failure
+
+[ ] Omitted confound (UHI, ENSO, volcanic, land-use, instrument splice)
+
+[ ] Weak or absent convergent validity (single proxy class / non-independent consensus)
+
+[ ] Citation laundering
+
+[ ] Premise laundering
+
+[ ] Ignored adjacent literature
+
+[ ] Missing decisive test / no falsification criterion stated
+
+[ ] Data/code not archived or independently reproducible
+
+[ ] Assessment-report confidence inflation (chapter hedge stripped at SPM/media stage)
+
+[ ] Motive claim unsupported
+
+[ ] Needs more source verification
+
+For each checked box, give one sentence explaining why.
+
+-----
+
+1. FINAL OUTPUT FORMAT
+
+End with this concise summary:
+
+- Strongest defensible claim:
+- Claim being overextended:
+- Main proxy/model problem:
+- Main level-of-analysis problem:
+- Main omitted confound:
+- Pre-specification / forking-paths risk:
+- Convergent validity status:
+- Decisive test and falsification criterion:
+- Citation-use verdict:
+- Overall verdict:
+- Confidence level:
+- What would change this assessment:
+
+Confidence levels:
+
+- Low
+- Moderate
+- High
+
+-----
+
+REMINDER
+
+Suspicion, practitioner frustration, and cross-checking against a different data source are valid discovery tools. They are often how domain experts (station-network technicians, dendroclimatologists, actuaries, regional modelers) notice that a headline claim has outrun its underlying measurement.
+
+But they are not final evidence, and they are not a license to treat the entire field as illegitimate.
+
+The physical basis for anthropogenic greenhouse warming at the global scale is a different, more robust claim than most of what this audit will actually be applied to (regional impacts, single-event attribution, tipping-point timing, damage functions, scenario framing). Keep that distinction explicit in every verdict.
+
+You may begin with vibes.
+
+You may not end with vibes.
+
+Start wherever the anomaly appears.
+
+Finish with receipts.
